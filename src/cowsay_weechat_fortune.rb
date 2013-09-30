@@ -9,7 +9,7 @@ def weechat_init
   Weechat.hook_command('cowsay_fortune', "Cow Says Fortune",
                        "[mood] | [message]", "mood : 'Mood of cow' | message: an optional fortune you supply",    "", "cowsay_fortune", "")
 
-  return Weechat::WEECHAT_RC_OK
+  Weechat::WEECHAT_RC_OK
 end
 
 def cowsay_fortune data, buffer, arguments
@@ -18,9 +18,11 @@ def cowsay_fortune data, buffer, arguments
   if short_name == 'freenode'
     Weechat.print buffer, fortune
   else 
-    Weechat.command buffer, fortune
+    fortune.split("\n").map { |line| 
+      Weechat.command buffer, line.gsub(/\/ /, '// ')
+    }
   end
-  return Weechat::WEECHAT_RC_OK
+  Weechat::WEECHAT_RC_OK
 end
 
 def get_cow_fortune arguments='' 
