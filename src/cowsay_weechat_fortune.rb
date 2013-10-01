@@ -18,9 +18,8 @@ def cowsay_fortune data, buffer, arguments
   if short_name == 'freenode'
     Weechat.print buffer, fortune
   else 
-    fortune.split("\n").map { |line| 
-      Weechat.command buffer, line.gsub(/\/ /, '// ')
-    }
+    # Weechat command gets confused by the first forward slash.
+    Weechat.command buffer, fortune.gsub(/\/ /, '// ')
   end
   Weechat::WEECHAT_RC_OK
 end
