@@ -4,11 +4,10 @@ branches:
 
 before_install:
   - sudo apt-get update
+  - export PATH=$PATH:/usr/games
 
 install:
   - sudo apt-get install cowsay fortune
 
 script:
-  - cowsay $(fortune)
-  - echo $PATH
   - make test
