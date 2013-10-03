@@ -6,8 +6,8 @@ before_install:
   - sudo apt-get update
 
 install:
-  - apt-get install cowsay
-  - apt-get install fortune
+  - sudo apt-get install cowsay
+  - sudo apt-get install fortune
 
 script:
   - make test
