@@ -4,10 +4,10 @@ branches:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install cowsay
-  - which cowsay
-  - sudo apt-get install fortune-mod
 
+install:
+  - apt-get install cowsay
+  - apt-get install fortune
 
 script:
   - make test
