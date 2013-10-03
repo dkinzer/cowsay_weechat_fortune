@@ -5,9 +5,11 @@ branches:
 before_install:
   - sudo apt-get update
 
+virtualenv:
+  system_site_packages: true
+
 install:
-  - sudo apt-get -y install cowsay
-  - sudo apt-get -y install fortune
+  - sudo apt-get install cowsay fortune
 
 script:
   - make test
