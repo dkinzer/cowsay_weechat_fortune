@@ -1,0 +1,10 @@
+branches:
+  only:
+    - "master"
+
+before_install:
+  - sudo apt-get install cowsay
+  - sudo apt-get install fortune
+
+script:
+  - make test
