@@ -1,4 +1,4 @@
-Cowsay Weechat Fortune
+Cowsay Weechat Fortune [![Build Status](https://travis-ci.org/dkinzer/cowsay_weechat_fortune.png?branch=master)](https://travis-ci.org/dkinzer/cowsay_weechat_fortune)
 ======================
 
 This is a dumb `cowsay` and `fortune` mash-up.
