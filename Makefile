@@ -8,4 +8,5 @@ minitest:
 	ruby tests/*.rb
 
 deploy:
+	mkdir -p  ~/.weechat/ruby/autoload
 	cp -f src/cowsay_weechat_fortune.rb ~/.weechat/ruby/autoload
