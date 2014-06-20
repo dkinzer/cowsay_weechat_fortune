@@ -1,4 +1,4 @@
-require './src/cowsay_weechat_fortune.rb'
+require './lib/cowsay_weechat_fortune.rb'
 
 task :default => [:cowsay_fortune]
 
