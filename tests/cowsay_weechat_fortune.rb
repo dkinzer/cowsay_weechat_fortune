@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require './src/cowsay_weechat_fortune.rb'
+require './lib/cowsay_weechat_fortune.rb'
 
 class TestCowsayFortune < MiniTest::Unit::TestCase
 
