@@ -10,4 +10,5 @@ test-report:
 	  ruby -e 'require "codeclimate-test-reporter"; CodeClimate::TestReporter.start; ARGV.each {|file| require file}' ./tests/*.rb
 
 deploy:
-	cp -f lib/cowsay_weechat_fortune.rb ~/.weechat/ruby/autoload
+	mkdir -p  ~/.weechat/ruby/autoload
+	cp -f src/cowsay_weechat_fortune.rb ~/.weechat/ruby/autoload
