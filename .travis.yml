@@ -14,6 +14,7 @@ before_install:
 
 install:
   - sudo apt-get install cowsay fortune
+  - bundle install
 
 script:
   - make test-report
