@@ -10,4 +10,8 @@ install:
   - sudo apt-get install cowsay fortune
 
 script:
-  - make test
+  - make test-report
+
+addons:
+  code_climate:
+    repo_token: ea9f143077246776b08ea6cb17e7a1480f20c10bc05701c2d5ffa87cec888aa6
